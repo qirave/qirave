@@ -1,0 +1,11 @@
+query Taxes {
+    taxes {
+        id
+        name
+        code
+        on
+        rate
+        type
+        calculation
+    }
+}

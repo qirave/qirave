@@ -1,0 +1,5 @@
+mutation InsertIntoProductTaxesSingle($values: ProductTaxesInsertInput!) {
+    insertIntoProductTaxesSingle(values: $values) {
+        id
+    }
+}

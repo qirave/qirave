@@ -1,0 +1,13 @@
+query Products($where: ProductsFilters) {
+    productsSingle(where: $where) {
+        id
+    }
+}
+
+# {
+#   "where": {
+#     "id": {
+#       "eq": "dfdsfsdf"
+#     }
+#   }
+# }

@@ -1,0 +1,14 @@
+mutation InsertIntoTaxesSingle($values: TaxesInsertInput!) {
+    insertIntoTaxesSingle(values: $values) {
+        id
+        name
+        code
+        on
+        calculation
+        description
+        rate
+        type
+        createdAt
+        updatedAt
+    }
+}

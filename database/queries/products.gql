@@ -1,0 +1,69 @@
+query Products($limit: Int, $offset: Int, $orderBy: ProductsOrderBy) {
+	products(limit: $limit, offset: $offset, orderBy: $orderBy) {
+		id
+		canSale
+		canPurchase
+		name
+		description
+		image
+		price
+		cost
+		status
+		supplier
+		sku
+		barcode
+		tags
+		invoicingPolicy
+		saleUnitOfMesure
+		purchaseUnitOfMesure
+		createdAt
+		updatedAt
+		tax {
+			id
+			name
+			rate
+			type
+		}
+		category {
+			id
+			description
+			name
+		}
+		stockQuant {
+			quantityAvailable
+			quantityForecasted
+			quantityOnHand
+			quantityOutgoing
+			route {
+				active
+				id
+				name
+				routeType
+			}
+		}
+		stockMoves {
+			id
+			quantity
+			sourceRouteId
+			destinationRouteId
+			status
+			date
+		}
+		stockRules {
+			maxQuantity
+			minQuantity
+			routeId
+			ruleType
+		}
+	}
+}
+# {
+#     "limit": 20,
+#     "offset": 0,
+#     "orderBy": {
+#         "createdAt": {
+#         "direction": "desc",
+#         "priority": 0
+#         }
+#     }
+# }
