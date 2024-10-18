@@ -1,5 +1,5 @@
 mutation InsertIntoProductTaxesSingle($values: ProductTaxesInsertInput!) {
-    insertIntoProductTaxesSingle(values: $values) {
-        id
-    }
+  insertIntoProductTaxesSingle(values: $values) {
+    id
+  }
 }

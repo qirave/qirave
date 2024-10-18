@@ -14,16 +14,27 @@
     "jsx": "preserve",
     "incremental": true,
     "baseUrl": "./",
-    "typeRoots": ["./@types", "./node_modules/@types", "./database/schema/**/*.ts"],
+    "typeRoots": [
+      "lib/types",
+      "./node_modules/@types",
+      "./database/schema/**/*.ts"
+    ],
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/*": ["./*"],
+      "@/*": ["./*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "./@types/**/*.d.ts", "./database/schema/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "lib/types/**/*.d.ts",
+    "./database/schema/**/*.ts"
+  ],
   "exclude": ["node_modules"]
 }

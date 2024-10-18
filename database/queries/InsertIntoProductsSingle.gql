@@ -1,25 +1,25 @@
 mutation InsertIntoProductsSingle($values: ProductsInsertInput!) {
-    insertIntoProductsSingle(values: $values) {
-        id
-        canSale
-        canPurchase
-        name
-        description
-        image
-        price
-        cost
-        status
-        supplier
-        sku
-        barcode
-        tags
-        invoicingPolicy
-        saleUnitOfMesure
-        purchaseUnitOfMesure
-        categoryId
-        createdAt
-        updatedAt
-        purchaseTaxId
-        salesTaxId
-    }
+  insertIntoProductsSingle(values: $values) {
+    id
+    canSale
+    canPurchase
+    name
+    description
+    image
+    price
+    cost
+    status
+    supplier
+    sku
+    barcode
+    tags
+    invoicingPolicy
+    saleUnitOfMesure
+    purchaseUnitOfMesure
+    categoryId
+    createdAt
+    updatedAt
+    purchaseTaxId
+    salesTaxId
+  }
 }

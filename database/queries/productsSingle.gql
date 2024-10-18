@@ -1,7 +1,7 @@
 query Products($where: ProductsFilters) {
-    productsSingle(where: $where) {
-        id
-    }
+  productsSingle(where: $where) {
+    id
+  }
 }
 
 # {

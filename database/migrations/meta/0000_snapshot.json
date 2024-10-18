@@ -53,12 +53,8 @@
           "name": "categories_parentId_categories_id_fk",
           "tableFrom": "categories",
           "tableTo": "categories",
-          "columnsFrom": [
-            "parentId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["parentId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -208,12 +204,8 @@
           "name": "products_categoryId_categories_id_fk",
           "tableFrom": "products",
           "tableTo": "categories",
-          "columnsFrom": [
-            "categoryId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["categoryId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -221,12 +213,8 @@
           "name": "products_taxId_taxes_id_fk",
           "tableFrom": "products",
           "tableTo": "taxes",
-          "columnsFrom": [
-            "taxId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["taxId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -236,16 +224,12 @@
         "products_sku_unique": {
           "name": "products_sku_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "sku"
-          ]
+          "columns": ["sku"]
         },
         "products_barcode_unique": {
           "name": "products_barcode_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "barcode"
-          ]
+          "columns": ["barcode"]
         }
       }
     },
@@ -292,12 +276,8 @@
           "name": "variants_productId_products_id_fk",
           "tableFrom": "variants",
           "tableTo": "products",
-          "columnsFrom": [
-            "productId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["productId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -340,12 +320,8 @@
           "name": "variantRestrictions_productId_products_id_fk",
           "tableFrom": "variantRestrictions",
           "tableTo": "products",
-          "columnsFrom": [
-            "productId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["productId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -353,12 +329,8 @@
           "name": "variantRestrictions_variantId_variants_id_fk",
           "tableFrom": "variantRestrictions",
           "tableTo": "variants",
-          "columnsFrom": [
-            "variantId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["variantId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -366,12 +338,8 @@
           "name": "variantRestrictions_allowedValueId_variantValues_id_fk",
           "tableFrom": "variantRestrictions",
           "tableTo": "variantValues",
-          "columnsFrom": [
-            "allowedValueId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["allowedValueId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -422,12 +390,8 @@
           "name": "variantValues_variantId_variants_id_fk",
           "tableFrom": "variantValues",
           "tableTo": "variants",
-          "columnsFrom": [
-            "variantId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["variantId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -490,12 +454,8 @@
           "name": "stockMoves_productId_products_id_fk",
           "tableFrom": "stockMoves",
           "tableTo": "products",
-          "columnsFrom": [
-            "productId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["productId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -503,12 +463,8 @@
           "name": "stockMoves_sourceRouteId_stockRoutes_id_fk",
           "tableFrom": "stockMoves",
           "tableTo": "stockRoutes",
-          "columnsFrom": [
-            "sourceRouteId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["sourceRouteId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -516,12 +472,8 @@
           "name": "stockMoves_destinationRouteId_stockRoutes_id_fk",
           "tableFrom": "stockMoves",
           "tableTo": "stockRoutes",
-          "columnsFrom": [
-            "destinationRouteId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["destinationRouteId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -580,12 +532,8 @@
           "name": "stockQuant_productId_products_id_fk",
           "tableFrom": "stockQuant",
           "tableTo": "products",
-          "columnsFrom": [
-            "productId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["productId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -593,12 +541,8 @@
           "name": "stockQuant_routeId_stockRoutes_id_fk",
           "tableFrom": "stockQuant",
           "tableTo": "stockRoutes",
-          "columnsFrom": [
-            "routeId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["routeId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -649,12 +593,8 @@
           "name": "stockRoutes_parentRouteId_stockRoutes_id_fk",
           "tableFrom": "stockRoutes",
           "tableTo": "stockRoutes",
-          "columnsFrom": [
-            "parentRouteId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["parentRouteId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -706,12 +646,8 @@
           "name": "stockRules_productId_products_id_fk",
           "tableFrom": "stockRules",
           "tableTo": "products",
-          "columnsFrom": [
-            "productId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["productId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         },
@@ -719,12 +655,8 @@
           "name": "stockRules_routeId_stockRoutes_id_fk",
           "tableFrom": "stockRules",
           "tableTo": "stockRoutes",
-          "columnsFrom": [
-            "routeId"
-          ],
-          "columnsTo": [
-            "id"
-          ],
+          "columnsFrom": ["routeId"],
+          "columnsTo": ["id"],
           "onDelete": "no action",
           "onUpdate": "no action"
         }
@@ -825,9 +757,7 @@
         "suppliers_email_unique": {
           "name": "suppliers_email_unique",
           "nullsNotDistinct": false,
-          "columns": [
-            "email"
-          ]
+          "columns": ["email"]
         }
       }
     },

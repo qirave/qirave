@@ -7,24 +7,37 @@ import stockRules from '@/database/schema/stock/rules';
 import { tallestElement } from '@/lib/utils';
 
 export const stockRoutes: ReturnType<typeof pgTable> = pgTable('stockRoutes', {
-    id: serial('id').primaryKey(),
-    name: varchar('name', { length: 255 }).notNull(),
-    active: boolean('active').default(true),
-    routeType: varchar('routeType', { length: tallestElement([...STOCK_ROUTE_TYPES]).length, enum: STOCK_ROUTE_TYPES}).notNull().$type<StockRouteType>().default('initial'),
-    parentRouteId: bigint('parentRouteId', { mode: 'number' }).references(() => stockRoutes.id),  // Parent location for hierarchy
+  id: serial('id').primaryKey(),
+  name: varchar('name', { length: 255 }).notNull(),
+  active: boolean('active').default(true),
+  routeType: varchar('routeType', {
+    length: tallestElement([...STOCK_ROUTE_TYPES]).length,
+    enum: STOCK_ROUTE_TYPES
+  })
+    .notNull()
+    .$type<StockRouteType>()
+    .default('initial'),
+  parentRouteId: bigint('parentRouteId', { mode: 'number' }).references(
+    () => stockRoutes.id
+  ) // Parent location for hierarchy
 });
-
 
 // Define relations for stockRoutes table
 export const stockRoutesRelations = relations(stockRoutes, ({ one, many }) => ({
-    parentRoute: one(stockRoutes, { fields: [stockRoutes.parentRouteId], references: [stockRoutes.id], relationName: 'stockRoutesHierarchy' }),
-    childRoutes: many(stockRoutes, { relationName: 'stockRoutesHierarchy' }),
-    // Reverse relations for stockMoves
-    sourceMoves: many(stockMoves, { relationName: 'sourceRouteStockMoves' }),
-    destinationMoves: many(stockMoves, { relationName: 'destinationRouteStockMoves' }),
-    // Reverse relations for stockQuant and stockRules
-    stockQuants: many(stockQuant, { relationName: 'routeStockQuant' }),
-    stockRules: many(stockRules, { relationName: 'routeStockRules' })
+  parentRoute: one(stockRoutes, {
+    fields: [stockRoutes.parentRouteId],
+    references: [stockRoutes.id],
+    relationName: 'stockRoutesHierarchy'
+  }),
+  childRoutes: many(stockRoutes, { relationName: 'stockRoutesHierarchy' }),
+  // Reverse relations for stockMoves
+  sourceMoves: many(stockMoves, { relationName: 'sourceRouteStockMoves' }),
+  destinationMoves: many(stockMoves, {
+    relationName: 'destinationRouteStockMoves'
+  }),
+  // Reverse relations for stockQuant and stockRules
+  stockQuants: many(stockQuant, { relationName: 'routeStockQuant' }),
+  stockRules: many(stockRules, { relationName: 'routeStockRules' })
 }));
 
 export type StockRoute = typeof stockRoutes.$inferSelect;
